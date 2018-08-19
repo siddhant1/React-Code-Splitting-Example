@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
 import { LoadAsync } from "./LoadableUtil";
 
@@ -11,6 +11,15 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <ul>
+            <li>
+              <Link to="/home" >HOME</Link>
+            </li>
+            <li>
+              <Link to="/dash" >DASh</Link>
+            </li>
+            
+          </ul>
           <Route path="/home" component={AsyncHome} />
           <Route path="/dash" component={AsyncDashboard} />
         </div>
